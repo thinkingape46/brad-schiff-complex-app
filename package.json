@@ -1,0 +1,25 @@
+{
+  "name": "brad-schiff-complex-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinkingape46/brad-schiff-complex-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thinkingape46/brad-schiff-complex-app/issues"
+  },
+  "homepage": "https://github.com/thinkingape46/brad-schiff-complex-app#readme",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
