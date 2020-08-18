@@ -1,4 +1,3 @@
-const user = require('../models/User');
 const User = require('../models/User');
 
 exports.login = function() {
