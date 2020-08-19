@@ -47,16 +47,19 @@ User.prototype.validate = function() {
     }
 }
 
-User.prototype.login = function(callback) {
-    this.cleanUp();
-    usersCollection.findOne({username: this.data.username}, (err, attemptedUser) => {
-        if (attemptedUser && attemptedUser.password == this.data.password) {
-            callback("Congrats!!");
+User.prototype.login = function() {
+    return new Promise((resolve, reject) => {
+            this.cleanUp();
+            usersCollection.findOne({username: this.data.username}, (err, attemptedUser) => {
+                if (attemptedUser && attemptedUser.password == this.data.password) {
+                    resolve("Congrats!!");
+                }
+                else {
+                    reject("Invalid username or password");
+                }
+            })
         }
-        else {
-            callback("Invalid username or password");
-        }
-    })
+    );
 }
 
 User.prototype.register = function() {
